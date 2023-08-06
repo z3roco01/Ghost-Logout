@@ -8,6 +8,8 @@
 		"z3roco01"
 	],
 	"contact": {
+		"sources": "https://github.com/z3roco01/Ghost-Logout",
+		"issues": "https://github.com/z3roco01/Ghost-Logout/issues"
 	},
 	"license": "Unlicense",
 	"icon": "assets/ghost_logout/icon.png",
