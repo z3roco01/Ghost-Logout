@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "ghost_logout",
+	"version": "${version}",
+	"name": "Ghost Logout",
+	"description": "Spawns a ghost of a player when they logout",
+	"authors": [
+		"z3roco01"
+	],
+	"contact": {
+	},
+	"license": "Unlicense",
+	"icon": "assets/ghost_logout/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"z3roco01.ghostLogout.GhostLogout"
+		]
+	},
+	"mixins": [
+		"ghost_logout.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
