@@ -3,10 +3,6 @@ package z3roco01.ghostLogout.command;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.minecraft.entity.data.DataTracker;
-import net.minecraft.entity.data.TrackedData;
-import net.minecraft.entity.data.TrackedDataHandlerRegistry;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -34,12 +30,12 @@ public class TestGhostCommand {
         MinecraftServer     server = source.getServer();
         ServerWorld         world  = server.getWorld(World.OVERWORLD);
         if(world == null) {
-            source.sendFeedback(() -> Text.of("world == null"), false);
+            source.sendFeedback(Text.of("world == null"), false);
             return -1;
         }
         ServerPlayerEntity  player = source.getPlayerOrThrow();
         if(player == null) {
-            source.sendFeedback(() -> Text.of("player == null"), false);
+            source.sendFeedback(Text.of("player == null"), false);
             return -1;
         }
 
@@ -55,7 +51,7 @@ public class TestGhostCommand {
 
         world.spawnEntity(ghost);
 
-        source.sendFeedback(() -> Text.of("spawned @ " + x + " " + y + " " + z), false);
+        source.sendFeedback(Text.of("spawned @ " + x + " " + y + " " + z), false);
         return 1;
     }
 }
